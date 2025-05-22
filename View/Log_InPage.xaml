@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppSalas.View.Log_InPage"
+             BackgroundColor="White"
+             Shell.NavBarIsVisible="False">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Botón atrás -->
+        <Grid Grid.Row="0" Padding="20,10,10,10">
+            <ImageButton
+            Source="back_arrow.png"
+            Command="{Binding BackCommand}"
+            BackgroundColor="Transparent"
+            HeightRequest="25"
+            WidthRequest="25"
+            HorizontalOptions="Start" />
+        </Grid>
+
+        <VerticalStackLayout  Padding="40,70,40,40" Spacing="25" HorizontalOptions="Center" Grid.Row="1">
+
+            <!-- Título -->
+            <Label Text="Login Here"
+                 FontSize="38"
+                 FontAttributes="Bold"
+                 FontFamily="Poppins"
+                 TextColor="Black"
+                 HorizontalOptions="Center"/>
+
+
+
+
+            <StackLayout Padding="0,5,0,20" HorizontalOptions="Center">
+                <!-- Descripción -->
+                <Label Text="Welcome back you've"
+            FontSize="20"
+            TextColor="#626262"
+        
+            FontFamily="PoppinsSemiBold"
+            HorizontalOptions="Center" />
+
+                <Label Text="been missed!"
+            FontSize="20"
+            TextColor="Grey"
+        
+            HorizontalOptions="Center" 
+            FontFamily="PoppinsSemiBold"/>
+            </StackLayout>
+
+
+
+
+
+            <!-- Campos de entrada con ajuste de color y bordes -->
+            <Frame BackgroundColor="#ECECEC" CornerRadius="15" Padding="12" WidthRequest="320">
+                <Entry Placeholder="Email" TextColor="Black" BackgroundColor="Transparent" PlaceholderColor="#333" Text="{Binding Email}"/>
+            </Frame>
+
+            <Frame BackgroundColor="#ECECEC" CornerRadius="15" Padding="12" WidthRequest="320">
+                <Entry Placeholder="Password" IsPassword="True" TextColor="Black" BackgroundColor="Transparent" PlaceholderColor="#333" Text="{Binding Password}"/>
+            </Frame>
+
+            <Grid WidthRequest="320">
+                <Label Text="Forgot your password?"
+                 TextColor="black"
+                 FontSize="14"
+                 FontAttributes="Bold"
+                 FontFamily="PoppinsSemiBold"
+                 HorizontalOptions="End"
+                 VerticalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding OnClickedForgot}" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+
+
+            <StackLayout x:Name="buttonContainer" Orientation="Vertical" Spacing="10">
+
+
+                <Button Text="Sign in" 
+                FontSize="18"
+                BackgroundColor="#FCE9C8" 
+                TextColor="Black"
+                FontAttributes="Bold"
+                CornerRadius="10" 
+                HeightRequest="48"
+                FontFamily="ManropeBold"
+                Command="{Binding SignInCommand}"/>
+
+            </StackLayout>
+
+
+
+            <Label Text="Create new Account"
+                 TextColor="black"
+                 FontSize="14"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center"
+                 FontFamily="PoppinsSemiBold">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OnClickedCreateAcc}" />
+                </Label.GestureRecognizers>
+            </Label>
+
+
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage> 

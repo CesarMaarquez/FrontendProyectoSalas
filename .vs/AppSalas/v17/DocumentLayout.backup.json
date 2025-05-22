@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Mohamed\\Downloads\\AppSalas 13-05 Validaciones y home\\AppSalas\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FE2FF387-9226-4860-A017-485440A037C3}|AppSalas.csproj|c:\\users\\mohamed\\downloads\\appsalas 13-05 validaciones y home\\appsalas\\view\\setnewpasswordpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE2FF387-9226-4860-A017-485440A037C3}|AppSalas.csproj|solutionrelative:view\\setnewpasswordpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE2FF387-9226-4860-A017-485440A037C3}|AppSalas.csproj|c:\\users\\mohamed\\downloads\\appsalas 13-05 validaciones y home\\appsalas\\view\\setnewpasswordpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FE2FF387-9226-4860-A017-485440A037C3}|AppSalas.csproj|solutionrelative:view\\setnewpasswordpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE2FF387-9226-4860-A017-485440A037C3}|AppSalas.csproj|c:\\users\\mohamed\\downloads\\appsalas 13-05 validaciones y home\\appsalas\\view\\emailverificationpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FE2FF387-9226-4860-A017-485440A037C3}|AppSalas.csproj|solutionrelative:view\\emailverificationpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE2FF387-9226-4860-A017-485440A037C3}|AppSalas.csproj|c:\\users\\mohamed\\downloads\\appsalas 13-05 validaciones y home\\appsalas\\viewmodel\\emailverificationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE2FF387-9226-4860-A017-485440A037C3}|AppSalas.csproj|solutionrelative:viewmodel\\emailverificationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE2FF387-9226-4860-A017-485440A037C3}|AppSalas.csproj|c:\\users\\mohamed\\downloads\\appsalas 13-05 validaciones y home\\appsalas\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FE2FF387-9226-4860-A017-485440A037C3}|AppSalas.csproj|solutionrelative:appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{25f7e850-ffa1-11d0-b63f-00a0c922e851}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SetNewPasswordPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Mohamed\\Downloads\\AppSalas 13-05 Validaciones y home\\AppSalas\\View\\SetNewPasswordPage.xaml.cs",
+              "RelativeDocumentMoniker": "View\\SetNewPasswordPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Mohamed\\Downloads\\AppSalas 13-05 Validaciones y home\\AppSalas\\View\\SetNewPasswordPage.xaml.cs*",
+              "RelativeToolTip": "View\\SetNewPasswordPage.xaml.cs*",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T11:47:33.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SetNewPasswordPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Mohamed\\Downloads\\AppSalas 13-05 Validaciones y home\\AppSalas\\View\\SetNewPasswordPage.xaml",
+              "RelativeDocumentMoniker": "View\\SetNewPasswordPage.xaml",
+              "ToolTip": "C:\\Users\\Mohamed\\Downloads\\AppSalas 13-05 Validaciones y home\\AppSalas\\View\\SetNewPasswordPage.xaml",
+              "RelativeToolTip": "View\\SetNewPasswordPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-13T08:28:35.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmailVerificationViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Mohamed\\Downloads\\AppSalas 13-05 Validaciones y home\\AppSalas\\ViewModel\\EmailVerificationViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\EmailVerificationViewModel.cs",
+              "ToolTip": "C:\\Users\\Mohamed\\Downloads\\AppSalas 13-05 Validaciones y home\\AppSalas\\ViewModel\\EmailVerificationViewModel.cs",
+              "RelativeToolTip": "ViewModel\\EmailVerificationViewModel.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T08:26:03.041Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmailVerificationPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Mohamed\\Downloads\\AppSalas 13-05 Validaciones y home\\AppSalas\\View\\EmailVerificationPage.xaml",
+              "RelativeDocumentMoniker": "View\\EmailVerificationPage.xaml",
+              "ToolTip": "C:\\Users\\Mohamed\\Downloads\\AppSalas 13-05 Validaciones y home\\AppSalas\\View\\EmailVerificationPage.xaml",
+              "RelativeToolTip": "View\\EmailVerificationPage.xaml",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAgwG0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-13T08:25:52.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "C:\\Users\\Mohamed\\Downloads\\AppSalas 13-05 Validaciones y home\\AppSalas\\AppShell.xaml",
+              "RelativeDocumentMoniker": "AppShell.xaml",
+              "ToolTip": "C:\\Users\\Mohamed\\Downloads\\AppSalas 13-05 Validaciones y home\\AppSalas\\AppShell.xaml",
+              "RelativeToolTip": "AppShell.xaml",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAAALMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-12T08:10:15.725Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

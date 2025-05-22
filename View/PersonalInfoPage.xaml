@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Name="thisPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppSalas.View.PersonalInfoPage"
+             BackgroundColor="White"
+             Shell.NavBarIsVisible="False">
+    <Grid>
+        <!-- Definición de filas: encabezado y contenido -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Padding="20,10,10,10">
+            <ImageButton
+        Source="back_arrow.png"
+        Command="{Binding BackCommand}"
+        BackgroundColor="Transparent"
+        HeightRequest="25"
+        WidthRequest="25"
+        HorizontalOptions="Start" />
+        </Grid>
+
+        <!-- Contenido en ScrollView -->
+        <ScrollView Grid.Row="1" VerticalOptions="Fill">
+            <Grid VerticalOptions="Fill" HorizontalOptions="Fill">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Contenedor principal -->
+                <VerticalStackLayout Grid.Row="0"
+                             Padding="20,10"
+                             Spacing="20"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center">
+                    <!-- Título y descripción -->
+                    <Label Text="Información Personal"
+                 Style="{StaticResource TitleLabelStyle}"
+                 HorizontalTextAlignment="Center"
+                 HorizontalOptions="Center" />
+                    <Label Text="Completa tus datos para continuar"
+                 Style="{StaticResource BodyLabelStyle}"
+                 HorizontalTextAlignment="Center"
+                 HorizontalOptions="Center" />
+
+                    <!-- Fila: Edad y Género -->
+                    <!-- Se usa ContentView con WidthRequest para fijar el ancho total -->
+                    <ContentView HorizontalOptions="Center" WidthRequest="320">
+                        <HorizontalStackLayout Spacing="20" HorizontalOptions="Fill">
+                            <Frame BackgroundColor="#ECECEC"
+                     CornerRadius="15"
+                     Padding="12"
+                     WidthRequest="150"
+                     HorizontalOptions="Fill">
+                                <Entry Placeholder="Edad"
+                       Keyboard="Numeric"
+                       TextColor="Black"
+                       BackgroundColor="Transparent"
+                       PlaceholderColor="#333"
+                       Text="{Binding Edad}" />
+                            </Frame>
+                            <Frame BackgroundColor="#ECECEC"
+                     CornerRadius="15"
+                     Padding="12"
+                     WidthRequest="150"
+                     HorizontalOptions="Fill">
+                                <Picker Title="Género"
+                                        SelectedItem="{Binding Genero}">
+                                    <Picker.Items>
+                                        <x:String>Masculino</x:String>
+                                        <x:String>Femenino</x:String>
+                                        <x:String>No binario</x:String>
+                                        <x:String>Otro</x:String>
+                                        <x:String>Prefiero no responder</x:String>
+                                    </Picker.Items>
+                                </Picker>
+                            </Frame>
+                        </HorizontalStackLayout>
+                    </ContentView>
+
+                    <!-- Campo: Nombre -->
+                    <Frame BackgroundColor="#ECECEC"
+                 CornerRadius="15"
+                 Padding="12"
+                 WidthRequest="320"
+                 HorizontalOptions="Center">
+                        <Entry Placeholder="Nombre"
+                                 TextColor="Black"
+                                 BackgroundColor="Transparent"
+                                 PlaceholderColor="#333"
+                                 Text="{Binding Nombre}" />
+                    </Frame>
+
+                    <!-- Campo: Apellidos -->
+                    <Frame BackgroundColor="#ECECEC"
+                 CornerRadius="15"
+                 Padding="12"
+                 WidthRequest="320"
+                 HorizontalOptions="Center">
+                        <Entry Placeholder="Apellidos"
+                                 TextColor="Black"
+                                 BackgroundColor="Transparent"
+                                 PlaceholderColor="#333"
+                                 Text="{Binding Apellidos}" />
+                    </Frame>
+
+                    <!-- Campo: DNI -->
+                    <Frame BackgroundColor="#ECECEC"
+                 CornerRadius="15"
+                 Padding="12"
+                 WidthRequest="320"
+                 HorizontalOptions="Center">
+                        <Entry Placeholder="DNI"
+                                 
+                                 TextColor="Black"
+                                 BackgroundColor="Transparent"
+                                 PlaceholderColor="#333"
+                                 Text="{Binding Dni}" />
+                    </Frame>
+
+                    <!-- Contenedor de campos profesionales -->
+                    <VerticalStackLayout IsVisible="{Binding ShowProfessionalFields}" Spacing="20">
+                        <!-- Botón: Subir CV -->
+                        <Button Text="Subir CV (JPG, PNG, PDF)"
+                    Command="{Binding UploadCVCommand}"
+                    BackgroundColor="Transparent"
+                    TextColor="Black"
+                    WidthRequest="320"
+                    HorizontalOptions="Center"/>
+                        <!-- Campo: Años de experiencia -->
+                        <Frame BackgroundColor="#ECECEC"
+                   CornerRadius="15"
+                   Padding="12"
+                   WidthRequest="320"
+                   HorizontalOptions="Center">
+                            <Entry Placeholder="Años de experiencia"
+                                     Keyboard="Numeric"
+                                     TextColor="Black"
+                                     BackgroundColor="Transparent"
+                                     PlaceholderColor="#333"
+                                     Text="{Binding AniosExperiencia}" />
+                        </Frame>
+                        <!-- Campo: Especialidad -->
+                        <Frame BackgroundColor="#ECECEC"
+                   CornerRadius="15"
+                   Padding="12"
+                   WidthRequest="320"
+                   HorizontalOptions="Center">
+                            <Entry Placeholder="Especialidad"
+                                     TextColor="Black"
+                                     BackgroundColor="Transparent"
+                                     PlaceholderColor="#333"
+                                     Text="{Binding Especialidad}" />
+                        </Frame>
+                    </VerticalStackLayout>
+
+                    <!-- Fila: País y Estado -->
+                    <ContentView HorizontalOptions="Center" WidthRequest="320">
+                        <HorizontalStackLayout Spacing="20" HorizontalOptions="Fill">
+                            <Frame BackgroundColor="#ECECEC"
+                     CornerRadius="15"
+                     Padding="12"
+                     WidthRequest="150"
+                     HorizontalOptions="Fill">
+                                <Picker Title="País"
+                    ItemsSource="{Binding Paises}"
+                    SelectedItem="{Binding Pais}" />
+
+
+
+                            </Frame>
+                            <Frame BackgroundColor="#ECECEC"
+                     CornerRadius="15"
+                     Padding="12"
+                     WidthRequest="150"
+                     HorizontalOptions="Fill">
+                                <Picker Title="Estado"
+                    ItemsSource="{Binding Estados}"
+                    SelectedItem="{Binding Estado}" />
+                            </Frame>
+                        </HorizontalStackLayout>
+                    </ContentView>
+
+                    <!-- Campo: Dirección -->
+                    <Frame BackgroundColor="#ECECEC"
+                 CornerRadius="15"
+                 Padding="12"
+                 WidthRequest="320"
+                 HorizontalOptions="Center">
+                        <Entry Placeholder="Dirección"
+                                 TextColor="Black"
+                                 BackgroundColor="Transparent"
+                                 PlaceholderColor="#333"
+                                 Text="{Binding Direccion}" />
+                    </Frame>
+
+                    <!-- Botón: Guardar Información -->
+                    <Button Text="Guardar Información"
+                  Style="{StaticResource SelectedButtonStyle}"
+                  Command="{Binding SaveInformationCommand}"
+                  WidthRequest="320"
+                  HorizontalOptions="Center"
+                  Margin="0,25,0,10"/>
+                </VerticalStackLayout>
+            </Grid>
+        </ScrollView>
+    </Grid>
+</ContentPage>

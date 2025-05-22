@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppSalas.View.EmailVerificationPage"
+             BackgroundColor="White">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Flecha de retroceso -->
+        <Grid Grid.Row="0" Padding="20,10,10,10">
+            <ImageButton
+                Source="back_arrow.png"
+                Command="{Binding BackCommand}"
+                BackgroundColor="Transparent"
+                HeightRequest="25"
+                WidthRequest="25"
+                HorizontalOptions="Start" />
+        </Grid>
+
+        <!-- Contenido desplazable -->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="30" Spacing="20"
+                                 HorizontalOptions="Fill"
+                                 VerticalOptions="Start">
+
+                <!-- Título -->
+                <Label Text="Email Verification"
+                       Style="{StaticResource TitleLabelStyle}" />
+
+                <!-- Cajas de código -->
+                <HorizontalStackLayout HorizontalOptions="Center"
+                                       Spacing="12">
+                    <Frame WidthRequest="60" HeightRequest="60" CornerRadius="20"
+                           Padding="0" BackgroundColor="LightGray"
+                           HasShadow="False">
+                        <Entry Text="{Binding Code1, Mode=TwoWay}"
+                               Keyboard="Numeric" MaxLength="1"
+                               FontSize="24"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
+                               BackgroundColor="Transparent" />
+                    </Frame>
+                    <Frame WidthRequest="60" HeightRequest="60" CornerRadius="20"
+                           Padding="0" BackgroundColor="LightGray"
+                           HasShadow="False">
+                        <Entry Text="{Binding Code2, Mode=TwoWay}"
+                               Keyboard="Numeric" MaxLength="1"
+                               FontSize="24"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
+                               BackgroundColor="Transparent" />
+                    </Frame>
+                    <Frame WidthRequest="60" HeightRequest="60" CornerRadius="20"
+                           Padding="0" BackgroundColor="LightGray"
+                           HasShadow="False">
+                        <Entry Text="{Binding Code3, Mode=TwoWay}"
+                               Keyboard="Numeric" MaxLength="1"
+                               FontSize="24"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
+                               BackgroundColor="Transparent" />
+                    </Frame>
+                    <Frame WidthRequest="60" HeightRequest="60" CornerRadius="20"
+                           Padding="0" BackgroundColor="LightGray"
+                           HasShadow="False">
+                        <Entry Text="{Binding Code4, Mode=TwoWay}"
+                               Keyboard="Numeric" MaxLength="1"
+                               FontSize="24"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
+                               BackgroundColor="Transparent" />
+                    </Frame>
+                    <Frame WidthRequest="60" HeightRequest="60" CornerRadius="20"
+                           Padding="0" BackgroundColor="LightGray"
+                           HasShadow="False">
+                        <Entry Text="{Binding Code5, Mode=TwoWay}"
+                               Keyboard="Numeric" MaxLength="1"
+                               FontSize="24"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
+                               BackgroundColor="Transparent" />
+                    </Frame>
+                </HorizontalStackLayout>
+
+                <!-- Reenviar código -->
+                <Label Text="Don't receive the code? Click to Resend"
+       Style="{StaticResource BodyLabelStyle}"
+       FontFamily="ManropeRegular"
+                       TextColor="#4F7396">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+            Command="{Binding ReSendCommand}"
+            CommandParameter="{Binding Source={x:Reference ResendLabel}}" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+
+                <!-- Botón Verificar -->
+                <Button Text="Verify"
+                        Style="{StaticResource SelectedButtonStyle}"
+                        Command="{Binding VerifyCommand}" />
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

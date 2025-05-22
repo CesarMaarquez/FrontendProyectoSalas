@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- PÁGINA SELECT SPECIALTY CON CONTENIDO CENTRADO, ESPACIADO Y BOTONES PERSONALIZADOS -->
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AppSalas.View.SelectSpecialtyPage"
+    BackgroundColor="White"
+    Shell.NavBarIsVisible="False">
+
+    <Grid HorizontalOptions="Center" VerticalOptions="Start">
+        <ScrollView HorizontalOptions="Center" VerticalOptions="Start" Grid.Row="1">
+            <ContentView HorizontalOptions="Center" MaximumWidthRequest="800">
+                <VerticalStackLayout Padding="20" Spacing="40"
+                                     HorizontalOptions="Center"
+                                     VerticalOptions="Start">
+
+                    <!-- TÍTULO -->
+                    <Label Text="Select Specialty"
+                           Style="{StaticResource TitleLabelStyle}" />
+
+                    <!-- BOTONES DE OPCIÓN -->
+                    <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
+                        <!-- BOTÓN "PATIENT" (que aquí se considera que equivale a "cliente") -->
+                        <Button x:Name="PatientButton"
+                                Text="Patient"
+                                Style="{StaticResource BaseButtonStyle}"
+                                WidthRequest="160"
+                                Command="{Binding SelectPatientCommand}">
+                            <Button.Triggers>
+                                <DataTrigger TargetType="Button"
+                                             Binding="{Binding IsPatientSelected}"
+                                             Value="True">
+                                    <Setter Property="BackgroundColor" Value="#FCE9C8"/>
+                                    <Setter Property="BorderColor" Value="Transparent"/>
+                                </DataTrigger>
+                            </Button.Triggers>
+                        </Button>
+
+                        <!-- BOTÓN "THERAPIST" -->
+                        <Button x:Name="TherapistButton"
+                                Text="Therapist"
+                                Style="{StaticResource BaseButtonStyle}"
+                                WidthRequest="160"
+                                Command="{Binding SelectTherapistCommand}">
+                            <Button.Triggers>
+                                <DataTrigger TargetType="Button"
+                                             Binding="{Binding IsTherapistSelected}"
+                                             Value="True">
+                                    <Setter Property="BackgroundColor" Value="#FCE9C8"/>
+                                    <Setter Property="BorderColor" Value="Transparent"/>
+                                </DataTrigger>
+                            </Button.Triggers>
+                        </Button>
+                    </HorizontalStackLayout>
+
+                    <!-- BOTÓN SUBMIT -->
+                    <Button Text="Submit"
+                            Style="{StaticResource SelectedButtonStyle}"
+                            HorizontalOptions="Fill"
+                            Command="{Binding SubmitCommand}"/>
+                </VerticalStackLayout>
+            </ContentView>
+        </ScrollView>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,181 @@
+<Shell
+    x:Class="AppSalas.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:AppSalas.View"
+    Title="AppSalas"
+    Background="White"
+    Shell.FlyoutBackgroundColor="White"
+    Shell.BackgroundColor="White"
+    Shell.ForegroundColor="Black"
+    Shell.TitleColor="Black"
+    Shell.FlyoutWidth="250"
+    Shell.NavBarHasShadow="False">
+
+    <Shell.FlyoutHeader>
+        <StackLayout Padding="10" BackgroundColor="Transparent" Orientation="Vertical">
+            <Label Text="Navigation" 
+               FontSize="26"
+               TextColor="Black"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView HeightRequest="10" Color="Transparent" />
+        </StackLayout>
+    </Shell.FlyoutHeader>
+
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <Grid Padding="0,15,0,15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="{Binding Icon}"
+                   WidthRequest="26"
+                   HeightRequest="26"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Center"
+                   Margin="20,0,0,0"
+                   Grid.Column="0"/>
+
+                <Label Text="{Binding Title}"
+                   FontSize="20"
+                   TextColor="Black"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Center"
+                   Margin="20,0,0,0"
+                   Grid.Column="1"/>
+            </Grid>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+
+    <Shell.FlyoutFooter>
+        <StackLayout Spacing="0" Orientation="Vertical">
+            <!-- Ítem de "Información" -->
+            <Grid Padding="0,15,0,15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="info_icon.png"
+                   WidthRequest="26"
+                   HeightRequest="26"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Center"
+                   Margin="20,0,0,0"
+                   Grid.Column="0">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding FirstCommand}" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <!-- Label vacío para ocupar el espacio que tienen los títulos en el ItemTemplate -->
+                <Label Text=""
+                   HorizontalOptions="Start"
+                   VerticalOptions="Center"
+                   Margin="28,0,0,0"
+                   Grid.Column="1"/>
+            </Grid>
+
+            <!-- Ítem de "Logout" -->
+            <Grid Padding="0,15,0,15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="logout_icon.png"
+                   WidthRequest="26"
+                   HeightRequest="26"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Center"
+                   Margin="20,0,0,0"
+                   Grid.Column="0">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding LogoutCommand}" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label Text=""
+                   HorizontalOptions="Start"
+                   VerticalOptions="Center"
+                   Margin="28,0,0,0"
+                   Grid.Column="1"/>
+            </Grid>
+        </StackLayout>
+    </Shell.FlyoutFooter>
+
+
+    <!-- Página Principal -->
+    <ShellContent Route="MainPage"
+                  ContentTemplate="{DataTemplate local:MainPage}" 
+                  FlyoutItemIsVisible="False" />
+
+    <!-- Otros elementos del menú -->
+    <FlyoutItem Title="Home" Icon="home_icon.png" Route="HomePage">
+        <ShellContent ContentTemplate="{DataTemplate local:HomePage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Calendar" Icon="calendar_icon.png" Route="CalendarPage">
+        <ShellContent ContentTemplate="{DataTemplate local:CalendarPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Therapies" Icon="therapies_icon.png" Route="TherapiesPage">
+        <ShellContent ContentTemplate="{DataTemplate local:TherapiesPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Patients" Icon="patients_icon.png" Route="PatientsPage">
+        <ShellContent ContentTemplate="{DataTemplate local:PatientsPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Reading" Icon="reading_icon.png" Route="ReadingPage">
+        <ShellContent ContentTemplate="{DataTemplate local:ReadingPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Notes" Icon="notes_icon.png" Route="NotesPage">
+        <ShellContent ContentTemplate="{DataTemplate local:NotesPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Messages" Icon="messages_icon.png" Route="MessagesPage">
+        <ShellContent ContentTemplate="{DataTemplate local:MessagesPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Profile" Icon="profile_icon.png" Route="ProfilePage">
+        <ShellContent ContentTemplate="{DataTemplate local:ProfilePage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Payment" Icon="payment_icon.png" Route="PaymentPage">
+        <ShellContent ContentTemplate="{DataTemplate local:PaymentPage}" />
+    </FlyoutItem>
+
+    <ShellContent Route="RegisterPage" 
+              ContentTemplate="{DataTemplate local:RegisterPage}" 
+              FlyoutItemIsVisible="False"/>
+    <ShellContent Route="EmailVerificationPage" 
+              ContentTemplate="{DataTemplate local:EmailVerificationPage}" 
+              FlyoutItemIsVisible="False"/>
+    <ShellContent Route="SelectSpecialtyPage" 
+              ContentTemplate="{DataTemplate local:SelectSpecialtyPage}" 
+              FlyoutItemIsVisible="False"/>
+    <ShellContent Route="PersonalInfoPage" 
+              ContentTemplate="{DataTemplate local:PersonalInfoPage}" 
+              FlyoutItemIsVisible="False"/>
+    <ShellContent Route="EducationalInfoPage" 
+              ContentTemplate="{DataTemplate local:EducationalInfoPage}" 
+              FlyoutItemIsVisible="False"/>
+    <ShellContent Route="SelectSpecialtiesPage" 
+              ContentTemplate="{DataTemplate local:SelectSpecialtiesPage}" 
+              FlyoutItemIsVisible="False"/>
+    <ShellContent Route="DisponibilityPage" 
+              ContentTemplate="{DataTemplate local:DisponibilityPage}" 
+              FlyoutItemIsVisible="False"/>
+    <ShellContent Route="Log_InPage" 
+              ContentTemplate="{DataTemplate local:Log_InPage}" 
+              FlyoutItemIsVisible="False"/>
+    <ShellContent Route="ForgotPasswordPage" 
+              ContentTemplate="{DataTemplate local:ForgotPassword}" 
+              FlyoutItemIsVisible="False"/>
+    <ShellContent Route="SetNewPasswordPage" 
+              ContentTemplate="{DataTemplate local:SetNewPasswordPage}" 
+              FlyoutItemIsVisible="False"/>
+
+</Shell>

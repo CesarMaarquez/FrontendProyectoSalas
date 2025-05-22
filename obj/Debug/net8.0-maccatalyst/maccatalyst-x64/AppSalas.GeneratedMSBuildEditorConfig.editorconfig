@@ -1,0 +1,169 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0-maccatalyst
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = AppSalas
+build_property.ProjectDir = C:\Users\Mohamed\Downloads\AppSalas 13-05 Validaciones y home\AppSalas\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/Mohamed/Downloads/AppSalas 13-05 Validaciones y home/AppSalas/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppSalas.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/Mohamed/Downloads/AppSalas 13-05 Validaciones y home/AppSalas/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppSalas.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/Mohamed/Downloads/AppSalas 13-05 Validaciones y home/AppSalas/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppSalas.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/Mohamed/Downloads/AppSalas 13-05 Validaciones y home/AppSalas/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppSalas.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/Mohamed/Downloads/AppSalas 13-05 Validaciones y home/AppSalas/View/CalendarPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppSalas.View.CalendarPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\CalendarPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\CalendarPage.xaml
+
+[C:/Users/Mohamed/Downloads/AppSalas 13-05 Validaciones y home/AppSalas/View/DisponibilityPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppSalas.View.DisponibilityPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\DisponibilityPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\DisponibilityPage.xaml
+
+[C:/Users/Mohamed/Downloads/AppSalas 13-05 Validaciones y home/AppSalas/View/EducationalInfoPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppSalas.View.EducationalInfoPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\EducationalInfoPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\EducationalInfoPage.xaml
+
+[C:/Users/Mohamed/Downloads/AppSalas 13-05 Validaciones y home/AppSalas/View/EmailVerificationPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppSalas.View.EmailVerificationPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\EmailVerificationPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\EmailVerificationPage.xaml
+
+[C:/Users/Mohamed/Downloads/AppSalas 13-05 Validaciones y home/AppSalas/View/ForgotPasswordPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppSalas.View.ForgotPasswordPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ForgotPasswordPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ForgotPasswordPage.xaml
+
+[C:/Users/Mohamed/Downloads/AppSalas 13-05 Validaciones y home/AppSalas/View/HomePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppSalas.View.HomePage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\HomePage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\HomePage.xaml
+
+[C:/Users/Mohamed/Downloads/AppSalas 13-05 Validaciones y home/AppSalas/View/Log_InPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppSalas.View.Log_InPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Log_InPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Log_InPage.xaml
+
+[C:/Users/Mohamed/Downloads/AppSalas 13-05 Validaciones y home/AppSalas/View/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppSalas.View.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\MainPage.xaml
+
+[C:/Users/Mohamed/Downloads/AppSalas 13-05 Validaciones y home/AppSalas/View/MessagesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppSalas.View.MessagesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\MessagesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\MessagesPage.xaml
+
+[C:/Users/Mohamed/Downloads/AppSalas 13-05 Validaciones y home/AppSalas/View/NotesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppSalas.View.NotesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\NotesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\NotesPage.xaml
+
+[C:/Users/Mohamed/Downloads/AppSalas 13-05 Validaciones y home/AppSalas/View/PatientsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppSalas.View.PatientsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\PatientsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\PatientsPage.xaml
+
+[C:/Users/Mohamed/Downloads/AppSalas 13-05 Validaciones y home/AppSalas/View/PaymentPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppSalas.View.PaymentPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\PaymentPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\PaymentPage.xaml
+
+[C:/Users/Mohamed/Downloads/AppSalas 13-05 Validaciones y home/AppSalas/View/PersonalInfoPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppSalas.View.PersonalInfoPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\PersonalInfoPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\PersonalInfoPage.xaml
+
+[C:/Users/Mohamed/Downloads/AppSalas 13-05 Validaciones y home/AppSalas/View/ProfilePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppSalas.View.ProfilePage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ProfilePage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ProfilePage.xaml
+
+[C:/Users/Mohamed/Downloads/AppSalas 13-05 Validaciones y home/AppSalas/View/ReadingPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppSalas.View.ReadingPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ReadingPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ReadingPage.xaml
+
+[C:/Users/Mohamed/Downloads/AppSalas 13-05 Validaciones y home/AppSalas/View/RegisterPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppSalas.View.RegisterPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\RegisterPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\RegisterPage.xaml
+
+[C:/Users/Mohamed/Downloads/AppSalas 13-05 Validaciones y home/AppSalas/View/SelectSpecialtiesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppSalas.View.SelectSpecialtiesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\SelectSpecialtiesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\SelectSpecialtiesPage.xaml
+
+[C:/Users/Mohamed/Downloads/AppSalas 13-05 Validaciones y home/AppSalas/View/SelectSpecialtyPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppSalas.View.SelectSpecialtyPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\SelectSpecialtyPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\SelectSpecialtyPage.xaml
+
+[C:/Users/Mohamed/Downloads/AppSalas 13-05 Validaciones y home/AppSalas/View/SelectStrugglesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppSalas.View.SelectStrugglesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\SelectStrugglesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\SelectStrugglesPage.xaml
+
+[C:/Users/Mohamed/Downloads/AppSalas 13-05 Validaciones y home/AppSalas/View/SetNewPasswordPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppSalas.View.SetNewPasswordPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\SetNewPasswordPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\SetNewPasswordPage.xaml
+
+[C:/Users/Mohamed/Downloads/AppSalas 13-05 Validaciones y home/AppSalas/View/TherapiesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppSalas.View.TherapiesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\TherapiesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\TherapiesPage.xaml

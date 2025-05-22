@@ -1,0 +1,1 @@
+C:\Users\Ocampo\source\repos\AppSalas\AppSalas.csproj;x64

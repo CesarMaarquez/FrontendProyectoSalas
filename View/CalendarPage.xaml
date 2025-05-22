@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pluginCal="clr-namespace:Plugin.Maui.Calendar.Controls;assembly=Plugin.Maui.Calendar"
+    x:Class="AppSalas.View.CalendarPage"
+    Title="Calendario">
+
+    <VerticalStackLayout Padding="20">
+        <pluginCal:Calendar
+            x:Name="MyCalendar"
+            ShownDate="{Binding ShownDate, Mode=TwoWay}"
+            SelectedDate="{Binding SelectedDate, Mode=TwoWay}"
+            BackgroundColor="White" />
+    </VerticalStackLayout>
+</ContentPage>

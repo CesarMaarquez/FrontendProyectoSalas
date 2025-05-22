@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- ESTA ES LA PÁGINA PRINCIPAL -->
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppSalas.View.MainPage"
+             x:Name="MainPageRoot"
+             BackgroundColor="White">
+
+    <!-- CONTENEDOR DE DESPLAZAMIENTO -->
+    <ScrollView>
+        <!-- CONTENTVIEW PARA CENTRAR EL CONTENIDO -->
+        <ContentView HorizontalOptions="Center" MaximumWidthRequest="600">
+            <!-- STACK VERTICAL CON ESPACIADO Y PADDING -->
+            <VerticalStackLayout Padding="20" Spacing="20">
+
+                <!-- SELECCIONADOR DE PAÍSES -->
+                <Picker Title="🌐"
+                ItemsSource="{Binding Countries}"
+                ItemDisplayBinding="{Binding FlagEmoji}"
+                SelectedItem="{Binding SelectedCountry, Mode=TwoWay}"
+                FontSize="28"
+                WidthRequest="42"
+                HorizontalOptions="Start"
+                Margin="10,0,0,0"/>
+
+                <!-- TÍTULO (aplicando el estilo de título) -->
+                <Label Text="{Binding TitleText}"
+               Style="{StaticResource TitleLabelStyle}"
+               FontFamily="ManropeBold"
+                       TextColor="Black"/>
+
+                <!-- IMAGEN DE PORTADA -->
+                <Image Source="portada.png"
+               HeightRequest="250"
+               Aspect="AspectFill"
+               HorizontalOptions="Fill"/>
+
+                <!-- MENSAJE INSPIRACIONAL -->
+                <Label Text="Therapy for Everyone"
+               FontSize="35"
+               FontAttributes="Bold"
+               TextColor="Black"
+               FontFamily="ManropeExBold"
+               HorizontalOptions="Center"/>
+
+                <!-- DESCRIPCIÓN -->
+                <Label Text="{Binding DescriptionText}"
+               FontSize="18"
+               TextColor="Black"
+               FontFamily="ManropeRegular"
+               
+               HorizontalTextAlignment="Center"/>
+
+                <!-- CONTENEDOR DE BOTONES (INICIO DE SESIÓN Y REGISTRO) -->
+                <StackLayout Orientation="Vertical" Spacing="10">
+                    <!-- Botón de Login (usando el estilo base) -->
+                    <Button Text="{Binding LoginText}"
+                  Style="{StaticResource BaseButtonStyle}"  Command="{Binding LogInCommand}" />
+                    <!-- Botón de Registro; si deseas que tenga fondo distinto, puedes sobrescribir BackgroundColor -->
+                    <Button Text="{Binding SignupText}"
+                  Style="{StaticResource SelectedButtonStyle}"
+                  Command="{Binding SignUpCommand}"/>
+                </StackLayout>
+
+                <Label FontSize="16"
+       TextColor="Black"
+       FontFamily="ManropeRegular"
+       HorizontalTextAlignment="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="By continuing, you agree to the " />
+                            <Span Text="Terms of Use" 
+                  
+                                  TextDecorations="Underline">
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding TermsCommand}" />
+                                </Span.GestureRecognizers>
+                            </Span>
+                            <Span Text=". Read our Privacy Policy." />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+
+
+
+                <!-- ETIQUETA PARA CONTINUAR CON OTROS MÉTODOS (usando estilo de cuerpo) -->
+                <Label Text="{Binding ContinueWithText}"
+               Style="{StaticResource BodyLabelStyle}"
+               FontFamily="PoppinsSemiBold"
+                       TextColor="#1F41BB"/>
+
+                <!-- CONTENEDOR CON ICONOS DE REDES SOCIALES -->
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="15">
+                    <Frame BackgroundColor="#ECECEC"
+                 Padding="8"
+                 CornerRadius="12"
+                 HasShadow="False"
+                 BorderColor="Transparent">
+                        <Image Source="google_icon.png"
+                   HeightRequest="30"
+                   WidthRequest="40"/>
+                    </Frame>
+
+                    <Frame BackgroundColor="#ECECEC"
+                 Padding="8"
+                 CornerRadius="12"
+                 HasShadow="False"
+                 BorderColor="Transparent">
+                        <Image Source="facebook_icon.png"
+                   HeightRequest="30"
+                   WidthRequest="40"/>
+                    </Frame>
+
+                    <Frame BackgroundColor="#ECECEC"
+                 Padding="8"
+                 CornerRadius="12"
+                 HasShadow="False"
+                 BorderColor="Transparent">
+                        <Image Source="apple_icon.png"
+                   HeightRequest="30"
+                   WidthRequest="40"/>
+                    </Frame>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </ContentView>
+    </ScrollView>
+</ContentPage>

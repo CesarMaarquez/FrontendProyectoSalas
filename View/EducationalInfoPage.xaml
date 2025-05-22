@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Name="thisPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppSalas.View.EducationalInfoPage"
+             BackgroundColor="White"
+             Shell.NavBarIsVisible="False">
+    <Grid>
+        <!-- Definición de filas: encabezado (si es necesario) y contenido -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Padding="20,10,10,10">
+            <ImageButton
+Source="back_arrow.png"
+Command="{Binding BackCommand}"
+BackgroundColor="Transparent"
+HeightRequest="25"
+WidthRequest="25"
+HorizontalOptions="Start" />
+        </Grid>
+
+        <!-- Contenido en ScrollView -->
+        <ScrollView Grid.Row="1" VerticalOptions="Fill">
+            <Grid VerticalOptions="Fill" HorizontalOptions="Fill">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Contenedor principal con Padding y Spacing uniformes -->
+                <VerticalStackLayout Grid.Row="0" 
+                                     Padding="20,10" 
+                                     Spacing="20" 
+                                     HorizontalOptions="Center" 
+                                     VerticalOptions="Center">
+                    <!-- Título -->
+                    <Label Text="Educational Information"
+                           Style="{StaticResource TitleLabelStyle}"
+                           HorizontalTextAlignment="Center"
+                           HorizontalOptions="Center" />
+
+                    <!-- Campo: Institución -->
+                    <Frame BackgroundColor="#ECECEC"
+                           CornerRadius="15"
+                           Padding="12"
+                           WidthRequest="320"
+                           HorizontalOptions="Center">
+                        <Entry Placeholder="Institution"
+                               TextColor="Black"
+                               BackgroundColor="Transparent"
+                               PlaceholderColor="#333"
+                               Text="{Binding Institution}"/>
+                    </Frame>
+
+                    <!-- Campo: Grado -->
+                    <Frame BackgroundColor="#ECECEC"
+                           CornerRadius="15"
+                           Padding="12"
+                           WidthRequest="320"
+                           HorizontalOptions="Center">
+                        <Entry Placeholder="Degree"
+                               TextColor="Black"
+                               BackgroundColor="Transparent"
+                               PlaceholderColor="#333"
+                               Text="{Binding Degree}"/>
+                    </Frame>
+
+                    <!-- Contenedor para campos de fechas -->
+                    <ContentView HorizontalOptions="Center" WidthRequest="320">
+                        <HorizontalStackLayout Spacing="20" HorizontalOptions="Fill">
+                            <!-- Campo: Start Date -->
+                            <Frame BackgroundColor="#ECECEC"
+                                   CornerRadius="15"
+                                   Padding="12"
+                                   WidthRequest="150"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center">
+                                <DatePicker
+    Date="{Binding StartDate}"
+    Format="dd-MM-yy"
+    TextColor="Black"
+    BackgroundColor="Transparent"
+    VerticalOptions="Center" />
+                            </Frame>
+                            <!-- Campo: End Date -->
+                            <Frame BackgroundColor="#ECECEC"
+                                   CornerRadius="15"
+                                   Padding="12"
+                                   WidthRequest="150"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center">
+                                <DatePicker
+    Date="{Binding EndDate}"
+                                     Format="dd-MM-yy"
+    TextColor="Black"
+    BackgroundColor="Transparent"
+    VerticalOptions="Center" />
+                            </Frame>
+                        </HorizontalStackLayout>
+                    </ContentView>
+
+                    <!-- Botón: Subir Certificado -->
+                    <Button Text="Upload Your Certificate (JPG, PNG, PDF)"
+                            Command="{Binding UploadCertificateCommand}"
+                            BackgroundColor="Transparent"
+                            TextColor="Black"
+                            WidthRequest="320"
+                            HorizontalOptions="Center"/>
+
+                    <!-- Botón: Submit -->
+                    <Button Text="Submit"
+                            Style="{StaticResource SelectedButtonStyle}"
+                            Command="{Binding SaveInformationCommand}"
+                            WidthRequest="320"
+                            HorizontalOptions="Center"
+                            Margin="0,25,0,10"/>
+                </VerticalStackLayout>
+            </Grid>
+        </ScrollView>
+    </Grid>
+</ContentPage>

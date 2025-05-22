@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!-- Estilo global para los títulos -->
+    <Style x:Key="TitleLabelStyle" TargetType="Label">
+        <!-- Se asume que "MyDisplayFont" está registrado en tu csproj -->
+        <Setter Property="FontFamily" Value="MyDisplayFont" />
+        <Setter Property="FontSize" Value="28"/>
+        <Setter Property="TextColor" Value="Black"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="HorizontalOptions" Value="Center"/>
+    </Style>
+
+    <!-- Estilo para etiquetas de cuerpo o mensajes -->
+    <Style x:Key="BodyLabelStyle" TargetType="Label">
+        <Setter Property="FontFamily" Value="MyButtonFont" />
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="TextColor" Value="#007bff"/>
+        <Setter Property="HorizontalOptions" Value="Center"/>
+    </Style>
+
+    <!-- Estilo base para botones -->
+    <Style x:Key="BaseButtonStyle" TargetType="Button">
+        <Setter Property="FontFamily" Value="MyButtonFont"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="BackgroundColor" Value="Transparent"/>
+        <Setter Property="TextColor" Value="Black"/>
+        <Setter Property="BorderColor" Value="LightGray"/>
+        <Setter Property="BorderWidth" Value="0.5"/>
+        <Setter Property="CornerRadius" Value="10"/>
+        <Setter Property="HeightRequest" Value="48"/>
+    </Style>
+
+    <!-- Estilo para botones en estado seleccionado -->
+    <Style x:Key="SelectedButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+        <Setter Property="BackgroundColor" Value="#FCE9C8"/>
+        <Setter Property="BorderColor" Value="Transparent"/>
+    </Style>
+
+    <!-- Estilo para botones de acción (por ejemplo, navegar o confirmar) -->
+    <Style x:Key="ActionButtonStyle" TargetType="Button">
+        <Setter Property="FontFamily" Value="MyButtonFont"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="TextColor" Value="White"/>
+        <Setter Property="BackgroundColor" Value="#007bff"/>
+        <Setter Property="CornerRadius" Value="10"/>
+        <Setter Property="HeightRequest" Value="50"/>
+        <Setter Property="HorizontalOptions" Value="Center"/>
+    </Style>
+
+</ResourceDictionary>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:AppSalas.ViewModel"
+    x:Class="AppSalas.View.RegisterPage"
+    BackgroundColor="White">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Botón atrás -->
+        <Grid Grid.Row="0" Padding="20,10,10,10">
+            <ImageButton
+        Source="back_arrow.png"
+        Command="{Binding BackCommand}"
+        BackgroundColor="Transparent"
+        HeightRequest="25"
+        WidthRequest="25"
+        HorizontalOptions="Start" />
+        </Grid>
+
+
+
+        <!-- Contenido -->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="40" Spacing="20" HorizontalOptions="Center">
+
+                <!-- Título y descripción -->
+                <Label Text="{Binding CreateAccount}"
+                       FontFamily="PoppinsBold"
+               Style="{StaticResource TitleLabelStyle}" />
+                <Label Text="{Binding AccountDescription}"
+               Style="{StaticResource BodyLabelStyle}"
+                       FontFamily="PoppinsMedium"
+                       TextColor="#4A4F55"
+               Margin="0,5,0,20" />
+
+                <!-- Email -->
+                <Frame BackgroundColor="#ECECEC" CornerRadius="15" Padding="12" WidthRequest="320">
+                    <Entry
+            Placeholder="{Binding EmailPlaceholder}"
+            Text="{Binding Email}"
+            Keyboard="Email"
+            BackgroundColor="Transparent"
+            PlaceholderColor="#333"
+            TextColor="Black" />
+                </Frame>
+
+                <!-- Password -->
+                <Frame BackgroundColor="#ECECEC" CornerRadius="15" Padding="12" WidthRequest="320">
+                    <Entry
+            Placeholder="{Binding PasswordPlaceholder}"
+            Text="{Binding Password}"
+            IsPassword="True"
+            BackgroundColor="Transparent"
+            PlaceholderColor="#333"
+            TextColor="Black" />
+                </Frame>
+
+                <!-- Confirm Password -->
+                <Frame BackgroundColor="#ECECEC" CornerRadius="15" Padding="12" WidthRequest="320">
+                    <Entry
+            Placeholder="{Binding ConfirmPasswordPlaceholder}"
+            Text="{Binding ConfirmPassword}"
+            IsPassword="True"
+            BackgroundColor="Transparent"
+            PlaceholderColor="#333"
+            TextColor="Black" />
+                </Frame>
+
+                <!-- Teléfono con Picker de país -->
+                <Frame BackgroundColor="#ECECEC" CornerRadius="15" Padding="0" WidthRequest="320">
+                    <HorizontalStackLayout Padding="12" Spacing="8" VerticalOptions="Center">
+
+                        <!-- Aquí usamos directamente Countries + DisplayName -->
+                        <Picker
+              ItemsSource="{Binding Countries}"
+              SelectedItem="{Binding SelectedCountry}"
+              ItemDisplayBinding="{Binding DisplayName}"
+              Title="{Binding SelectCountryCode}"
+              WidthRequest="140"
+              HorizontalOptions="Start" />
+
+                        <Entry
+              Placeholder="{Binding PhonePlaceholder}"
+              Text="{Binding PhoneNumber}"
+              Keyboard="Telephone"
+              HorizontalOptions="Fill"
+              BackgroundColor="Transparent"
+              PlaceholderColor="#333"
+              TextColor="Black" />
+                    </HorizontalStackLayout>
+                </Frame>
+
+                <!-- Términos y condiciones -->
+                <HorizontalStackLayout VerticalOptions="Center" Margin="0,15,0,0">
+                    <CheckBox IsChecked="{Binding TermsAccepted}" VerticalOptions="Center" />
+                    <Label Text="{Binding TermsLabel}"
+           FontFamily="PoppinsMedium"
+           TextColor="#4A4F55"
+           Style="{StaticResource BodyLabelStyle}"
+           VerticalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding TermsCommand}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </HorizontalStackLayout>
+
+
+                <!-- Botón registrarse -->
+                <Button
+          Text="{Binding SignupButton}"
+          Style="{StaticResource SelectedButtonStyle}"
+          Command="{Binding RegisterCommand}"
+          IsEnabled="{Binding CanRegister}"
+          WidthRequest="320"
+          Margin="0,25,0,10" />
+
+                <!-- Ya tienes cuenta -->
+                <Label Text="{Binding AlreadyAccount}"
+               Style="{StaticResource BodyLabelStyle}"
+               TextColor="#3498db">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavigateToLoginCommand}" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
